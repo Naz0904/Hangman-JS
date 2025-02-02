@@ -1,8 +1,7 @@
 # Hangman-JS
-____ ____ ____ ____ ____ ____ ____ 
-||H |||a |||n |||g |||m |||a |||n ||
-||__|||__|||__|||__|||__|||__|||__||
-|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+
+
+![[Pasted image 20250202204446.png]]
 
 Hey! this is a simple game based on the classic Hangman - where instead of the hangman, your 💗s are at stake. 
 It's built using **JavaScript**, **HTML**, and **CSS**. This project was created from scratch as a learning experience and will be further improved with Tailwind CSS for styling.
