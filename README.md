@@ -2,53 +2,57 @@
 
 ![Screenshot 2025-02-02 204440](https://github.com/user-attachments/assets/e029bef9-7e9f-4e1e-97e3-bf8cb85774e4)
 
-Hey! this is a simple game based on the classic Hangman - where instead of the hangman, your 💗s are at stake. 
-It's built using **JavaScript**, **HTML**, and **CSS**. This project was created from scratch as a learning experience and will be further improved with Tailwind CSS for styling.
+Hey! this is a simple game based on the classic Hangman - where instead of the hangman, your 💗s are at stake.
+It's built using **JavaScript**, **HTML**, and **Tailwind CSS**. This project was created from scratch as a learning experience and I had a lot of fun making it (_totally never had the urge to scream my lungs out_ 🫣)
+
+Here's a brief of my project - I hope you like it <3
 
 ## ✨ Features
 
-- Random word selection from a predefined list
+- A fun pastel-themed minimalistic UI
+- Sound effects for interactive feedback
 - User input through - keyboard events & a clickable keyboard on screen
-- Tracking of correct and incorrect guesses and displaying the score
-- Simple UI to display game progress
-- Restart option to play again
+- Responsive on most laptops and selected phone screens
+- Dynamic word selection for varied gameplay
+- Game state reset properly after each round
+- Improved functionality
+- Bugs fixed
 
-##  💻 Technologies Used
+## 💻 Technologies Used
 
 - JavaScript
 - HTML
-- CSS (Tailwind CSS to be added later)
+- Tailwind CSS
 
-## 🎮 How to Play 
+## 🎮 How to Play
 
-1. Press Start and the game will display a random word and you have certain lives (💗)
-2. Guess letters by pressing keys on your keyboard or clicking on the keys on-screen
-3. If your guess is correct, the letter is revealed.Correct guesses reveal letters in the word.
-4. When all the guesses are correct, you win the round.
-5. If your guess is incorrect, you lose a heart.
-6. When all hearts are lost, you lose the the round
-7. Win by guessing the word before all the lives are lost !
+1. Press **START to begin**
+2. A random word appears, you have limited lives.
+3. Guess letters by **pressing keys** on your keyboard or **clicking on the keys on-screen**
+4. Correct guesses reveal letters; wrong guesses cost you a 💗
+5. Win by guessing **full word** before all the lives are lost 🫱🏼‍🫲🏼
 
-## 📈 Future Improvements
-
-- Enhanced UI with Tailwind CSS
-- Adding responsiveness
-- Fetching words from an API for more variety
-
-## 🟢 Getting Started 
+## 🟢 Getting Started
 
 To run the project locally:
-8. Clone the repository:
-    
-    ```sh
-    git clone https://github.com/yourusername/hangman-game.git
-    ```
-    
-9. Open `index.html` in your browser.
 
-## ☁️ Contributions 
+1. Clone the repository:
 
-This project is for learning purposes, but feedback and suggestions are always welcome ^_^
+   ```sh
+   git clone https://github.com/yourusername/hangman-game.git
+   ```
 
+2. Open `index.html` in your browser.
 
-> _"This is my first public repo! Built it from scratch & had a blast making it work. More updates coming soon!"_
+## ☁️ Contributions
+
+This project has been completed but feedback and suggestions are always welcome ^\_^
+
+## 💡 Key Learnings
+
+This project taught me **A LOT** including:
+
+- **Tailwind CSS**: My first time using this framework! I added custom colors, fonts and learnt how utility classes work.
+- **Core JS concepts**: Improved my understanding of eventlisteners, async await, do...while loop, and DOM Manipulatiom.
+- **Debugging Skills**: Faced and fixed many frustrating bugs, which helped me be more patient.
+- **Responsiveness Challenges**: Making the game responsive was **FAR trickier** than I expected!

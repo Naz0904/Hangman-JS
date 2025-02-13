@@ -1,55 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>The Hangman Game</title>
-</head>
-<body>
-    <div class="container">
-        <div class="heading">Guess The Words</div>
-        <div class="display-cont">
-            <div class="displayMsg"></div>
-            <div class="word"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Hangman Game</title>
+  </head>
+  <body class="bg-Creamish h-screen">
+    <nav class="bg-SageGreen items-center md:text-4xl text-3xl md:p-4 p-3">
+      <div class="font-InriaSans font-bold text-DeepPurple">Hangman</div>
+    </nav>
+    <div
+      class="containeri md:h-[85vh] h-screen md:max-w-full w-screen flex flex-col justify-center items-center md:mt-10 mt-16"
+    >
+      <div
+        class="grid h-full md:w-full w-screen grid-flow-row items-center justify-center md:gap-2 gap-8"
+      >
+        <div class="display-cont place-self-center">
+          <div
+            class="displayMsg bg-LighterGreen flex justify-center items-end text-center shadow-sm shadow-slate-400 rounded m-4 text-DeepPurple font-serif md:p-4 h-16"
+          ></div>
+          <div class="hint"></div>
+          <!--The word-->
         </div>
-        <div class="keyboard">
-            <div class="keys a">A</div>
-            <div class="keys b">B</div>
-            <div class="keys c">C</div>
-            <div class="keys d">D</div>
-            <div class="keys e">E</div>
-            <div class="keys f">F</div>
-            <div class="keys g">G</div>
-            <div class="keys h">H</div>
-            <div class="keys i">I</div>
-            <div class="keys j">J</div>
-            <div class="keys k">K</div>
-            <div class="keys l">L</div>
-            <div class="keys m">M</div>
-            <div class="keys n">N</div>
-            <div class="keys o">O</div>
-            <div class="keys p">P</div>
-            <div class="keys q">Q</div>
-            <div class="keys r">R</div>
-            <div class="keys s">S</div>
-            <div class="keys t">T</div>
-            <div class="keys u">U</div>
-            <div class="keys v">V</div>
-            <div class="keys w">W</div>
-            <div class="keys x">X</div>
-            <div class="keys y">Y</div>
-            <div class="keys z">Z</div>
+        <div
+          class="word md:p-4 font-InriaSans font-bold bg-SageGreen p-2 m-2 text-center rounded text-DeepPurple place-self-center shadow-sm shadow-slate-400 w-fit"
+        ></div>
+        <!-- The keyboard -->
+        <div
+          class="keyboard md:h-[36vh] h-30 md:w-[70vw] w-screen bg-SageGreen rounded-3xl place-items-center md:p-6 p-4 m-2 grid grid-cols-8 md:gap-4 gap-2 shadow-sm shadow-slate-400"
+        >
+          <div
+            class="keys a font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none flex justify-center items-center"
+          >
+            A
+          </div>
+          <div
+            class="keys b font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            B
+          </div>
+          <div
+            class="keys c font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            C
+          </div>
+          <div
+            class="keys d font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            D
+          </div>
+          <div
+            class="keys e font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            E
+          </div>
+          <div
+            class="keys f font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            F
+          </div>
+          <div
+            class="keys g font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            G
+          </div>
+          <div
+            class="keys h font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            H
+          </div>
+
+          <div
+            class="keys i font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            I
+          </div>
+          <div
+            class="keys j font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            J
+          </div>
+          <div
+            class="keys k font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            K
+          </div>
+          <div
+            class="keys l font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            L
+          </div>
+          <div
+            class="keys m font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            M
+          </div>
+          <div
+            class="keys n font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            N
+          </div>
+          <div
+            class="keys o font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            O
+          </div>
+          <div
+            class="keys p font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            P
+          </div>
+          <div
+            class="keys q font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center col-start-2"
+          >
+            Q
+          </div>
+          <div
+            class="keys r font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            R
+          </div>
+          <div
+            class="keys s font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            S
+          </div>
+          <div
+            class="keys t font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            T
+          </div>
+          <div
+            class="keys u font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            U
+          </div>
+          <div
+            class="keys v font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            V
+          </div>
+
+          <div
+            class="keys w font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center col-end-4"
+          >
+            W
+          </div>
+          <div
+            class="keys x font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            X
+          </div>
+          <div
+            class="keys y font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            Y
+          </div>
+          <div
+            class="keys z font-InriaSans font-bold bg-LighterGreen w-full h-full rounded text-DeepPurple shadow-md shadow-slate-400 active:shadow-none cursor-pointer flex justify-center items-center"
+          >
+            Z
+          </div>
+          <!-- </div> -->
         </div>
-        <div class="bottom">
-            <div class="score"></div>
-            <div class="lives"></div>
+        <div
+          class="btns md:w-[10vw] place-self-center flex flex-col text-center"
+        >
+          <button
+            class="cont-btn btn font-Nunito font-semibold bg-BtnGreen text-white m-2 xl:rounded-full rounded-3xl py-3 px-6 shadow-md shadow-green-800 active:shadow-none"
+          >
+            CONTINUE
+          </button>
+          <button
+            class="end-btn btn font-Nunito font-semibold bg-BtnRed text-white m-2 xl:rounded-full rounded-3xl py-3 px-4 shadow-md shadow-red-800 active:shadow-none"
+          >
+            END
+          </button>
         </div>
-        <div class="btns"></div>
+        <div class="bottom flex justify-between text-DeepPurple font-semibold">
+          <div
+            class="score bg-GrayishBlue rounded m-2 p-4 shadow-sm shadow-blue-900"
+          >
+            &nbsp;
+          </div>
+          <div
+            class="lives bg-GrayishBlue rounded flex items-center justify-center text-center m-4 shadow-sm shadow-blue-900"
+          >
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="md:w-full w-screen pop-main-cont flex items-center justify-center"
+    >
+      <div class="w-full min-h-[80vh] flex justify-center items-center">
+        <div
+          class="pop-container flex flex-col items-center justify-center bg-SageGreen md:h-3/5 h-3/6 md:w-2/6 rounded md:p-4 p-6 md:m-0 m-4 shadow-sm shadow-slate-400"
+        >
+          <div
+            class="pop-msg font-InriaSans bg-LighterGreen text-DeepPurple mt-8 mb-4 rounded h-full flex flex-col justify-center items-center md:text-3xl text-2xl md:p-4 p-2 text-center shadow-sm shadow-slate-400"
+          ></div>
+          <button
+            class="start-btn btn font-Nunito font-semibold bg-DeepPurple text-white m-2 rounded-full py-3 px-6 text-2xl mb-4 shadow-slate-500 shadow-lg hover:shadow-none active:shadow-none"
+          >
+            START
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="pop-container"></div>
-
+    <!-- Audios -->
+    <audio class="key-press-aud">
+      <source src="Assets/key-click.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="start-restart-aud">
+      <source src="Assets/Start-restart.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="end-aud">
+      <source src="Assets/End.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="cont-aud">
+      <source src="Assets/key-click2.mp3" type="audio/mpeg" />
+    </audio>
+    <!-- </div> -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
