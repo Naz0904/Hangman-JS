@@ -7,6 +7,9 @@ It's built using **JavaScript**, **HTML**, and **Tailwind CSS**. This project wa
 
 Here's a brief of my project - I hope you like it <3
 
+Live Demo: [Play the Game!](https://hangman-game.ct.ws)
+
+
 ## ✨ Features
 
 - A fun pastel-themed minimalistic UI
@@ -18,11 +21,13 @@ Here's a brief of my project - I hope you like it <3
 - Improved functionality
 - Bugs fixed
 
-## 💻 Technologies Used
+## 💻 Languauges Used
 
 - JavaScript
 - HTML
-- Tailwind CSS
+
+## ⭐ Dependencies
+- TailwindCSS
 
 ## 🎮 How to Play
 
